@@ -12,5 +12,8 @@ namespace Common
     {
         [OperationContract]
         FileManipulationResults SendFile(FileManipulationOptions options);
+
+        [OperationContract]
+        void CreateObjects(string path);
     }
 }

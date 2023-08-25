@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "DataBase\DataBase.csproj", "{395B07E0-C65D-4EC8-ADF9-03A2735DC9A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{CC4EAF95-E6FC-4544-A169-BAC19DB7B4F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemManipulation", "FileSystemManipulation\FileSystemManipulation.csproj", "{15CED536-F73E-475C-BDD8-FD1914D55B64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{395B07E0-C65D-4EC8-ADF9-03A2735DC9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{395B07E0-C65D-4EC8-ADF9-03A2735DC9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{395B07E0-C65D-4EC8-ADF9-03A2735DC9A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4EAF95-E6FC-4544-A169-BAC19DB7B4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4EAF95-E6FC-4544-A169-BAC19DB7B4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4EAF95-E6FC-4544-A169-BAC19DB7B4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4EAF95-E6FC-4544-A169-BAC19DB7B4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15CED536-F73E-475C-BDD8-FD1914D55B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CED536-F73E-475C-BDD8-FD1914D55B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CED536-F73E-475C-BDD8-FD1914D55B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CED536-F73E-475C-BDD8-FD1914D55B64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

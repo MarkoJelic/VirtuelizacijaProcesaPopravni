@@ -46,8 +46,10 @@ namespace Client
             uploader.Start();
 
             // METODA ZA KREIRANJE OBJEKATA ************************** VAMO NASTAVITI
+            proxy.CreateObjects(@"C:\Users\Marko\source\repos\VirtuelizacijaProcesaPopravni\Service\csv\");
 
-
+            Console.WriteLine("Upload-er client je u upotrebi. Pritisnite bilo koji taster da se vratite u pocetni meni.");
+            Console.ReadLine();
         }
 
         private static IFileSender GetFileSender(string uploadPath, IConsumptionRecord proxy, IFileInUseChecker fileInUseChecker)
