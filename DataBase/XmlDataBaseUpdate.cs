@@ -18,7 +18,7 @@ namespace DataBase
         {
             string savePath = @"C:\Users\Marko\source\repos\VirtuelizacijaProcesaPopravni\DataBase\TBL_Load.xml";
             var xmlSavePath = new XElement("TBL_Load", from obj in loads
-                                                       select new XElement("Object", new XElement("Id", obj.Id),
+                                                       select new XElement("Object", //new XElement("Id", obj.Id),
                                                                                      new XElement("TimeStamp", obj.TimeStamp),
                                                                                      new XElement("ForecastValue", obj.ForecastValue),
                                                                                      new XElement("MeasuredValue", obj.MeasuredValue),

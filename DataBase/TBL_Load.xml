@@ -1,219 +1,387 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TBL_Load>
   <Object>
-    <Id>1</Id>
     <TimeStamp>2023-01-17T00:00:00</TimeStamp>
     <ForecastValue>6426.01794633789</ForecastValue>
     <MeasuredValue>6234</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-3.0801723827059666</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>2</Id>
     <TimeStamp>2023-01-17T01:00:00</TimeStamp>
     <ForecastValue>5985.55959816894</ForecastValue>
     <MeasuredValue>5886</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-1.691464460906223</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>3</Id>
     <TimeStamp>2023-01-17T02:00:00</TimeStamp>
     <ForecastValue>5589.46180366211</ForecastValue>
     <MeasuredValue>5483</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-1.94167068506492</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>4</Id>
     <TimeStamp>2023-01-17T03:00:00</TimeStamp>
     <ForecastValue>5312.01000183105</ForecastValue>
     <MeasuredValue>5188</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-2.3903238595036709</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>5</Id>
     <TimeStamp>2023-01-17T04:00:00</TimeStamp>
     <ForecastValue>5242.71289816894</ForecastValue>
     <MeasuredValue>5063</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-3.5495338370321989</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>6</Id>
     <TimeStamp>2023-01-17T05:00:00</TimeStamp>
     <ForecastValue>5405.45669816895</ForecastValue>
     <MeasuredValue>5242</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-3.1182124793771542</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>7</Id>
     <TimeStamp>2023-01-17T06:00:00</TimeStamp>
     <ForecastValue>5924.66204633789</ForecastValue>
     <MeasuredValue>5813</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-1.920902224976611</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>8</Id>
     <TimeStamp>2023-01-17T07:00:00</TimeStamp>
     <ForecastValue>6420.24265366211</ForecastValue>
     <MeasuredValue>6241</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-2.8720181647509961</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>9</Id>
     <TimeStamp>2023-01-17T08:00:00</TimeStamp>
     <ForecastValue>6602.14835183105</ForecastValue>
     <MeasuredValue>6430</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-2.6772683021936188</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>10</Id>
     <TimeStamp>2023-01-17T09:00:00</TimeStamp>
     <ForecastValue>6697.43235</ForecastValue>
     <MeasuredValue>6582</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-1.7537579762989979</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>11</Id>
     <TimeStamp>2023-01-17T10:00:00</TimeStamp>
     <ForecastValue>6693.75774633789</ForecastValue>
     <MeasuredValue>6539</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-2.3666882755450409</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>12</Id>
     <TimeStamp>2023-01-17T11:00:00</TimeStamp>
     <ForecastValue>6656.48365366211</ForecastValue>
     <MeasuredValue>6571</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-1.3009230507093235</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>13</Id>
     <TimeStamp>2023-01-17T12:00:00</TimeStamp>
     <ForecastValue>6613.96040183105</ForecastValue>
     <MeasuredValue>6565</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-0.74577915965042119</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>14</Id>
     <TimeStamp>2023-01-17T13:00:00</TimeStamp>
     <ForecastValue>6505.02705183105</ForecastValue>
     <MeasuredValue>6495</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-0.15438109054734261</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>15</Id>
     <TimeStamp>2023-01-17T14:00:00</TimeStamp>
     <ForecastValue>6409.48094816894</ForecastValue>
     <MeasuredValue>6413</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>0.05487372261125989</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>16</Id>
     <TimeStamp>2023-01-17T15:00:00</TimeStamp>
     <ForecastValue>6448.59170183105</ForecastValue>
     <MeasuredValue>6411</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-0.58636253051084319</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>17</Id>
     <TimeStamp>2023-01-17T16:00:00</TimeStamp>
     <ForecastValue>6797.17855</ForecastValue>
     <MeasuredValue>6688</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-1.6324543959330089</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>18</Id>
     <TimeStamp>2023-01-17T17:00:00</TimeStamp>
     <ForecastValue>7099.04205</ForecastValue>
     <MeasuredValue>6863</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-3.4393421244353779</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>19</Id>
     <TimeStamp>2023-01-17T18:00:00</TimeStamp>
     <ForecastValue>7135.79065</ForecastValue>
     <MeasuredValue>6926</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-3.0290304649148125</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>20</Id>
     <TimeStamp>2023-01-17T19:00:00</TimeStamp>
     <ForecastValue>7084.08024816894</ForecastValue>
     <MeasuredValue>6852</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-3.3870439020569139</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>21</Id>
     <TimeStamp>2023-01-17T20:00:00</TimeStamp>
     <ForecastValue>6987.4838</ForecastValue>
     <MeasuredValue>6743</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-3.6257422512234907</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>22</Id>
     <TimeStamp>2023-01-17T21:00:00</TimeStamp>
     <ForecastValue>6818.96534816894</ForecastValue>
     <MeasuredValue>6577</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-3.6789622649983302</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>23</Id>
     <TimeStamp>2023-01-17T22:00:00</TimeStamp>
     <ForecastValue>6730.2436</ForecastValue>
     <MeasuredValue>6478</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-3.8938499536894073</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
   </Object>
   <Object>
-    <Id>24</Id>
     <TimeStamp>2023-01-17T23:00:00</TimeStamp>
     <ForecastValue>6578.78699816894</ForecastValue>
     <MeasuredValue>6397</MeasuredValue>
-    <AbsolutePercentageDeviation>0</AbsolutePercentageDeviation>
-    <SquaredDeviation>0</SquaredDeviation>
+    <AbsolutePercentageDeviation>-2.8417539185390037</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
     <ImportedFileId>1</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T00:00:00</TimeStamp>
+    <ForecastValue>6426.01794633789</ForecastValue>
+    <MeasuredValue>6234</MeasuredValue>
+    <AbsolutePercentageDeviation>-3.0801723827059666</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T01:00:00</TimeStamp>
+    <ForecastValue>5985.55959816894</ForecastValue>
+    <MeasuredValue>5886</MeasuredValue>
+    <AbsolutePercentageDeviation>-1.691464460906223</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T02:00:00</TimeStamp>
+    <ForecastValue>5589.46180366211</ForecastValue>
+    <MeasuredValue>5483</MeasuredValue>
+    <AbsolutePercentageDeviation>-1.94167068506492</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T03:00:00</TimeStamp>
+    <ForecastValue>5312.01000183105</ForecastValue>
+    <MeasuredValue>5188</MeasuredValue>
+    <AbsolutePercentageDeviation>-2.3903238595036709</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T04:00:00</TimeStamp>
+    <ForecastValue>5242.71289816894</ForecastValue>
+    <MeasuredValue>5063</MeasuredValue>
+    <AbsolutePercentageDeviation>-3.5495338370321989</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T05:00:00</TimeStamp>
+    <ForecastValue>5405.45669816895</ForecastValue>
+    <MeasuredValue>5242</MeasuredValue>
+    <AbsolutePercentageDeviation>-3.1182124793771542</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T06:00:00</TimeStamp>
+    <ForecastValue>5924.66204633789</ForecastValue>
+    <MeasuredValue>5813</MeasuredValue>
+    <AbsolutePercentageDeviation>-1.920902224976611</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T07:00:00</TimeStamp>
+    <ForecastValue>6420.24265366211</ForecastValue>
+    <MeasuredValue>6241</MeasuredValue>
+    <AbsolutePercentageDeviation>-2.8720181647509961</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T08:00:00</TimeStamp>
+    <ForecastValue>6602.14835183105</ForecastValue>
+    <MeasuredValue>6430</MeasuredValue>
+    <AbsolutePercentageDeviation>-2.6772683021936188</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T09:00:00</TimeStamp>
+    <ForecastValue>6697.43235</ForecastValue>
+    <MeasuredValue>6582</MeasuredValue>
+    <AbsolutePercentageDeviation>-1.7537579762989979</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T10:00:00</TimeStamp>
+    <ForecastValue>6693.75774633789</ForecastValue>
+    <MeasuredValue>6539</MeasuredValue>
+    <AbsolutePercentageDeviation>-2.3666882755450409</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T11:00:00</TimeStamp>
+    <ForecastValue>6656.48365366211</ForecastValue>
+    <MeasuredValue>6571</MeasuredValue>
+    <AbsolutePercentageDeviation>-1.3009230507093235</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T12:00:00</TimeStamp>
+    <ForecastValue>6613.96040183105</ForecastValue>
+    <MeasuredValue>6565</MeasuredValue>
+    <AbsolutePercentageDeviation>-0.74577915965042119</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T13:00:00</TimeStamp>
+    <ForecastValue>6505.02705183105</ForecastValue>
+    <MeasuredValue>6495</MeasuredValue>
+    <AbsolutePercentageDeviation>-0.15438109054734261</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T14:00:00</TimeStamp>
+    <ForecastValue>6409.48094816894</ForecastValue>
+    <MeasuredValue>6413</MeasuredValue>
+    <AbsolutePercentageDeviation>0.05487372261125989</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T15:00:00</TimeStamp>
+    <ForecastValue>6448.59170183105</ForecastValue>
+    <MeasuredValue>6411</MeasuredValue>
+    <AbsolutePercentageDeviation>-0.58636253051084319</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T16:00:00</TimeStamp>
+    <ForecastValue>6797.17855</ForecastValue>
+    <MeasuredValue>6688</MeasuredValue>
+    <AbsolutePercentageDeviation>-1.6324543959330089</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T17:00:00</TimeStamp>
+    <ForecastValue>7099.04205</ForecastValue>
+    <MeasuredValue>6863</MeasuredValue>
+    <AbsolutePercentageDeviation>-3.4393421244353779</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T18:00:00</TimeStamp>
+    <ForecastValue>7135.79065</ForecastValue>
+    <MeasuredValue>6926</MeasuredValue>
+    <AbsolutePercentageDeviation>-3.0290304649148125</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T19:00:00</TimeStamp>
+    <ForecastValue>7084.08024816894</ForecastValue>
+    <MeasuredValue>6852</MeasuredValue>
+    <AbsolutePercentageDeviation>-3.3870439020569139</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T20:00:00</TimeStamp>
+    <ForecastValue>6987.4838</ForecastValue>
+    <MeasuredValue>6743</MeasuredValue>
+    <AbsolutePercentageDeviation>-3.6257422512234907</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T21:00:00</TimeStamp>
+    <ForecastValue>6818.96534816894</ForecastValue>
+    <MeasuredValue>6577</MeasuredValue>
+    <AbsolutePercentageDeviation>-3.6789622649983302</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T22:00:00</TimeStamp>
+    <ForecastValue>6730.2436</ForecastValue>
+    <MeasuredValue>6478</MeasuredValue>
+    <AbsolutePercentageDeviation>-3.8938499536894073</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
+  </Object>
+  <Object>
+    <TimeStamp>2023-01-18T23:00:00</TimeStamp>
+    <ForecastValue>6578.78699816894</ForecastValue>
+    <MeasuredValue>6397</MeasuredValue>
+    <AbsolutePercentageDeviation>-2.8417539185390037</AbsolutePercentageDeviation>
+    <SquaredDeviation>NaN</SquaredDeviation>
+    <ImportedFileId>2</ImportedFileId>
   </Object>
 </TBL_Load>

@@ -33,7 +33,7 @@ namespace Service
 
             // Uzima sve .csv fajlove iz prosledjenog direktorijuma
             string[] files = FileDirUtil.GetAllFiles(csvFilesPath);
-            List<Load> results = new List<Load>();
+            List<Load> loads = new List<Load>();
             List<Audit> audits = new List<Audit>();
             List<ImportedFile> importedFiles = new List<ImportedFile>();
             int cnt = 1;
@@ -47,10 +47,11 @@ namespace Service
                         //List<Audit> audits = new List<Audit>();
 
                         List<Load> loadObjects = csv.GetRecords<Load>().ToList();
+                        
 
                         var importedFile = new ImportedFile() { Id = cnt, FileName = fileName };
                         importedFiles.Add(importedFile);
-                        cnt++;
+                        
                         if (loadObjects.Count != 24)
                         {
                             var audit = new Audit() { Id = new Random().Next(), TimeStamp = DateTime.Now, MessageType = MsgType.Err, Message = "Neodgovarajuci broj sati." };
@@ -60,21 +61,24 @@ namespace Service
                         {
                             foreach (var lo in loadObjects)
                             {
-                                if (results.Any(x => x.TimeStamp == lo.TimeStamp))
+                                if (loads.Any(x => x.TimeStamp == lo.TimeStamp))
                                 {
-                                    var index = results.FindIndex(x => x.TimeStamp == lo.TimeStamp);
-                                    if (results[index].ForecastValue == 0)
+                                    var index = loads.FindIndex(x => x.TimeStamp == lo.TimeStamp);
+                                    if (loads[index].ForecastValue == 0)
                                     {
-                                        results[index].ForecastValue = lo.ForecastValue;
+                                        loads[index].ForecastValue = lo.ForecastValue;
                                     }
-                                    if (results[index].MeasuredValue == 0)
+                                    if (loads[index].MeasuredValue == 0)
                                     {
-                                        results[index].MeasuredValue = lo.MeasuredValue;
+                                        loads[index].MeasuredValue = lo.MeasuredValue;
                                     }
                                 }
                                 else
                                 {
-                                    results.Add(lo);
+                                    lo.AbsolutePercentageDeviation = double.NaN;
+                                    lo.SquaredDeviation = double.NaN;
+                                    lo.ImportedFileId = cnt;
+                                    loads.Add(lo);
                                 }
                             }
 
@@ -82,13 +86,45 @@ namespace Service
                         DataBase.XmlDataBaseUpdate.UpdateDBAudit(audits);
                         DataBase.XmlDataBaseUpdate.UpdateDBImportedFile(importedFiles);
 
+                        cnt++;
                         // update DB?
                     }
                 }
             }
             // POZIV METODE ZA PRORACUN DEVIJACIJE
+            if (ConfigurationManager.AppSettings["deviation"] == "APD")
+            {
+                GetAbsolutePercentageDeviation(loads);
+            }
+            else if (ConfigurationManager.AppSettings["deviation"] == "SD")
+            {
+                GetSquaredDeviation(loads);
+            }
+            
+            
             // update DB
-            DataBase.XmlDataBaseUpdate.UpdateDBLoad(results);
+            DataBase.XmlDataBaseUpdate.UpdateDBLoad(loads);
+
+            // PRORACUN DEVIJACIJE
+            //GetAbsolutePercentageDeviation(loads);
+            //GetSquaredDeviation(loads);
+
+        }
+
+        public void GetAbsolutePercentageDeviation(List<Load> loads)
+        {
+            foreach (var obj in loads)
+            {
+                obj.AbsolutePercentageDeviation = ((obj.MeasuredValue - obj.ForecastValue) / obj.MeasuredValue) * 100;
+            }
+        }
+
+        public void GetSquaredDeviation(List<Load> loads)
+        {
+            foreach (var obj in loads)
+            {
+                obj.SquaredDeviation = Math.Pow(((obj.MeasuredValue - obj.ForecastValue) / obj.MeasuredValue), 2);
+            }
         }
 
         public FileManipulationResults SendFile(FileManipulationOptions options)

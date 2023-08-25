@@ -6,6 +6,14 @@
   </Object>
   <Object>
     <Id>2</Id>
+    <FileName>forecast_2023_01_18.csv</FileName>
+  </Object>
+  <Object>
+    <Id>3</Id>
     <FileName>measured_2023_01_17.csv</FileName>
+  </Object>
+  <Object>
+    <Id>4</Id>
+    <FileName>measured_2023_01_18.csv</FileName>
   </Object>
 </TBL_Imported_File>
