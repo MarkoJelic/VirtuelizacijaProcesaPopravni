@@ -18,15 +18,70 @@ namespace Service
     {
         private string path;
 
-        public ConsumptionRecordService(string path)
+        public ConsumptionRecordService()
         {
             this.path = ConfigurationManager.AppSettings["path"];
+            FileDirUtil.CheckCreatePath(path);
         }
+
+        // RADI SA JEDNIM FAJLOM, PROMENIO FORMAT CSV TIME STAMPA
+        //public void CreateObjects(string csvFilesPath)
+        //{
+        //    var configuration = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, MissingFieldFound = null };
+
+        //    // Uzima sve .csv fajlove iz prosledjenog direktorijuma
+        //    //string[] files = FileDirUtil.GetAllFiles(csvFilesPath);
+        //    //foreach (string filePath in files)
+        //    //{
+        //        //string fileName = Path.GetFileName(csvFilesPath);
+        //        using (var reader = new StreamReader(csvFilesPath))
+        //        {
+        //            using (var csv = new CsvReader(reader, configuration))
+        //            {
+        //                List<Audit> audits = new List<Audit>();
+
+        //                //try
+        //                //{
+        //                List<Load> loadObjects = csv.GetRecords<Load>().ToList();
+        //                List<Load> results = new List<Load>();
+
+        //                foreach (var lo in loadObjects)
+        //                {
+        //                    if (results.Any(x => x.TimeStamp == lo.TimeStamp))
+        //                    {
+        //                        var index = results.FindIndex(x => x.TimeStamp == lo.TimeStamp);
+        //                        if (results[index].ForecastValue == 0)
+        //                        {
+        //                            results[index].ForecastValue = lo.ForecastValue;
+        //                        }
+        //                        if (results[index].MeasuredValue == 0)
+        //                        {
+        //                            results[index].MeasuredValue = lo.MeasuredValue;
+        //                        }
+        //                    }
+        //                    else
+        //                    {
+        //                        results.Add(lo);
+        //                    }
+        //                }
+
+        //                // }
+        //                //catch (Exception e)
+        //                //{
+        //                //    Console.WriteLine(e.Message);
+        //                //}
+        //            }
+        //        }
+        //    //}
+        //}
+
+
+        // NE RADI KONVERTOVANJE TIMESTAMPA, RADI SLANJE FAJLOVA
 
         public void CreateObjects(string csvFilesPath)
         {
-            var configuration = new CsvConfiguration(CultureInfo.InvariantCulture) { /*HasHeaderRecord = false, OBRISATI */ MissingFieldFound = null };
-            
+            var configuration = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, MissingFieldFound = null };
+
             // Uzima sve .csv fajlove iz prosledjenog direktorijuma
             string[] files = FileDirUtil.GetAllFiles(csvFilesPath);
             foreach (string filePath in files)
@@ -37,37 +92,37 @@ namespace Service
                     using (var csv = new CsvReader(reader, configuration))
                     {
                         List<Audit> audits = new List<Audit>();
-                        
-                        try
-                        {
-                            List<Load> loadObjects = csv.GetRecords<Load>().ToList();
-                            List<Load> results = new List<Load>();
 
-                            foreach (var lo in loadObjects)
+                        //try
+                        //{
+                        List<Load> loadObjects = csv.GetRecords<Load>().ToList();
+                        List<Load> results = new List<Load>();
+
+                        foreach (var lo in loadObjects)
+                        {
+                            if (results.Any(x => x.TimeStamp == lo.TimeStamp))
                             {
-                                if (results.Any(x => x.TimeStamp == lo.TimeStamp))
+                                var index = results.FindIndex(x => x.TimeStamp == lo.TimeStamp);
+                                if (results[index].ForecastValue == 0)
                                 {
-                                    var index = results.FindIndex(x => x.TimeStamp == lo.TimeStamp);
-                                    if (results[index].ForecastValue == 0)
-                                    {
-                                        results[index].ForecastValue = lo.ForecastValue;
-                                    }
-                                    if (results[index].MeasuredValue == 0)
-                                    {
-                                        results[index].MeasuredValue = lo.MeasuredValue;
-                                    }
+                                    results[index].ForecastValue = lo.ForecastValue;
                                 }
-                                else
+                                if (results[index].MeasuredValue == 0)
                                 {
-                                    results.Add(lo);
+                                    results[index].MeasuredValue = lo.MeasuredValue;
                                 }
                             }
-                            
+                            else
+                            {
+                                results.Add(lo);
+                            }
                         }
-                        catch (Exception e)
-                        {
 
-                        }
+                        // }
+                        //catch (Exception e)
+                        //{
+                        //    Console.WriteLine(e.Message);
+                        //}
                     }
                 }
             }
