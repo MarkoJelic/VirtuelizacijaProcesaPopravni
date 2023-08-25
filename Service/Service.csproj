@@ -87,6 +87,10 @@
       <Project>{C9EFF7CC-9B7C-4D26-8BE1-A4A00B6D26E7}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataBase\DataBase.csproj">
+      <Project>{395B07E0-C65D-4EC8-ADF9-03A2735DC9A6}</Project>
+      <Name>DataBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FileSystemManipulation\FileSystemManipulation.csproj">
       <Project>{15CED536-F73E-475C-BDD8-FD1914D55B64}</Project>
       <Name>FileSystemManipulation</Name>
