@@ -84,6 +84,7 @@ namespace Service
 
             // Uzima sve .csv fajlove iz prosledjenog direktorijuma
             string[] files = FileDirUtil.GetAllFiles(csvFilesPath);
+            List<Load> results = new List<Load>();
             foreach (string filePath in files)
             {
                 string fileName = Path.GetFileName(filePath);
@@ -96,7 +97,8 @@ namespace Service
                         //try
                         //{
                         List<Load> loadObjects = csv.GetRecords<Load>().ToList();
-                        List<Load> results = new List<Load>();
+                        //List<Load> results = new List<Load>();
+
 
                         foreach (var lo in loadObjects)
                         {
