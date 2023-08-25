@@ -34,6 +34,9 @@ namespace Service
             // Uzima sve .csv fajlove iz prosledjenog direktorijuma
             string[] files = FileDirUtil.GetAllFiles(csvFilesPath);
             List<Load> results = new List<Load>();
+            List<Audit> audits = new List<Audit>();
+            List<ImportedFile> importedFiles = new List<ImportedFile>();
+            int cnt = 1;
             foreach (string filePath in files)
             {
                 string fileName = Path.GetFileName(filePath);
@@ -41,13 +44,17 @@ namespace Service
                 {
                     using (var csv = new CsvReader(reader, configuration))
                     {
-                        List<Audit> audits = new List<Audit>();
+                        //List<Audit> audits = new List<Audit>();
 
                         List<Load> loadObjects = csv.GetRecords<Load>().ToList();
 
+                        var importedFile = new ImportedFile() { Id = cnt, FileName = fileName };
+                        importedFiles.Add(importedFile);
+                        cnt++;
                         if (loadObjects.Count != 24)
                         {
                             var audit = new Audit() { Id = new Random().Next(), TimeStamp = DateTime.Now, MessageType = MsgType.Err, Message = "Neodgovarajuci broj sati." };
+                            audits.Add(audit);
                         }
                         else
                         {
@@ -70,13 +77,16 @@ namespace Service
                                     results.Add(lo);
                                 }
                             }
+
                         }
+                        DataBase.XmlDataBaseUpdate.UpdateDBAudit(audits);
+                        DataBase.XmlDataBaseUpdate.UpdateDBImportedFile(importedFiles);
 
                         // update DB?
                     }
                 }
             }
-
+            // POZIV METODE ZA PRORACUN DEVIJACIJE
             // update DB
             DataBase.XmlDataBaseUpdate.UpdateDBLoad(results);
         }

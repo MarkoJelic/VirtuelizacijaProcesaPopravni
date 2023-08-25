@@ -18,6 +18,6 @@ namespace Common
 
         [XmlElement("FileName")]
         [DataMember]
-        public int FileName { get; set; }
+        public string FileName { get; set; }
     }
 }

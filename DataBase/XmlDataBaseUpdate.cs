@@ -42,7 +42,7 @@ namespace DataBase
 
         public static void UpdateDBImportedFile(List<ImportedFile> importedFiles)
         {
-            string savePath = @"C:\Users\Marko\source\repos\VirtuelizacijaProcesa\DataBase\TBL_Imported_File.xml";
+            string savePath = @"C:\Users\Marko\source\repos\VirtuelizacijaProcesaPopravni\DataBase\TBL_Imported_File.xml";
             var xmlSavePath = new XElement("TBL_Imported_File", from obj in importedFiles
                                                         select new XElement("Object", new XElement("Id", obj.Id),
                                                                                       new XElement("FileName", obj.FileName)));
