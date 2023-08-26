@@ -23,11 +23,21 @@ namespace Client
         private static void GetDeviations()
         {
             // DOWNLOAD PUTANJA
+            string downloadPath = ConfigurationManager.AppSettings["downloadPath"];
+            // Proverava da li postoji putanja
+            FileDirUtil.CheckCreatePath(downloadPath);
 
             ChannelFactory<IConsumptionRecord> channel = new ChannelFactory<IConsumptionRecord>("ConsumptionRecordService");
             IConsumptionRecord proxy = channel.CreateChannel();
 
-            //
+            IDownloader downloader = GetDownloader(proxy, downloadPath);
+            proxy.GetDeviations();
+            Console.WriteLine($"Ime datoteke Calculations, putnja {downloadPath}");
+        }
+
+        public static IDownloader GetDownloader(IConsumptionRecord proxy, string path)
+        {
+            return new StartDownloader(proxy, path);
         }
 
 

@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Service
 {
@@ -109,7 +110,47 @@ namespace Service
 
         }
 
-        
+        public void GetDeviations()
+        {
+            string path = @"C:\Users\Marko\source\repos\VirtuelizacijaProcesaPopravni\DataBase\TBL_Load.xml";
+
+            // Deserijalizuje Xml fajl i napravi listu objekata
+            List<Load> objects = new XmlSerialize().ConvertXmlToObjects<Load>(path);
+
+            string fileName = @"C:\Users\Marko\source\repos\VirtuelizacijaProcesa\Service\bin\Debug\Calculations.csv";
+
+            try
+            {
+                if (File.Exists(fileName))
+                {
+                    File.Delete(fileName);
+                }
+
+                using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+                {
+                    Byte[] title = new UTF8Encoding(true).GetBytes(objects.ToString());
+
+                    fs.Write(title, 0, title.Length);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public FileManipulationResults GetFiles(FileManipulationOptions options)
+        {
+            Console.WriteLine("Dobavljanje datoteke poceci sa: \"{options.FileName}\"");
+            return new GetFilesHandler(GetFilesQuery(options)).GetFiles();
+        }
+
+        private IQuery GetFilesQuery(FileManipulationOptions options)
+        {
+            return new FileSystemGetFilesQuery(options, path);
+        }
+
+
 
         public FileManipulationResults SendFile(FileManipulationOptions options)
         {

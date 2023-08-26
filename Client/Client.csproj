@@ -48,11 +48,13 @@
     <Compile Include="EventUploader.cs" />
     <Compile Include="FileInUseCommonChecker.cs" />
     <Compile Include="FileSender.cs" />
+    <Compile Include="IDownloader.cs" />
     <Compile Include="IFileInUseChecker.cs" />
     <Compile Include="IFileSender.cs" />
     <Compile Include="IUploader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartDownloader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

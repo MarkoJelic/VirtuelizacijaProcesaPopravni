@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetFilesHandler.cs" />
     <Compile Include="ICommand.cs" />
+    <Compile Include="IGetFilesHandler.cs" />
     <Compile Include="IInsertFileHandler.cs" />
     <Compile Include="InsertFileHandler.cs" />
+    <Compile Include="IQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

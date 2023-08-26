@@ -15,5 +15,11 @@ namespace Common
 
         [OperationContract]
         void CreateObjects(string path);
+
+        [OperationContract]
+        void GetDeviations();
+
+        [OperationContract]
+        FileManipulationResults GetFiles(FileManipulationOptions options);
     }
 }
