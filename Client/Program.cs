@@ -47,7 +47,6 @@ namespace Client
 
             // METODA ZA KREIRANJE OBJEKATA ************************** VAMO NASTAVITI
             proxy.CreateObjects(@"C:\Users\Marko\source\repos\VirtuelizacijaProcesaPopravni\Service\bin\Debug\");
-            //proxy.CreateObjects(@"C:\Users\Marko\source\repos\VirtuelizacijaProcesaPopravni\Service\bin\Debug\forecast_2023_01_17.csv");
 
             Console.WriteLine("Upload-er client je u upotrebi. Pritisnite bilo koji taster da se vratite u pocetni meni.");
             Console.ReadLine();

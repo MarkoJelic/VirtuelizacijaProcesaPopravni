@@ -27,7 +27,8 @@ namespace Service
 
         public void CreateObjects(string csvFilesPath)
         {
-            //XmlDataBaseUpdate dataBase = new XmlDataBaseUpdate();
+            DeviationCalculator calculator = new DeviationCalculator();
+            DeviationReporter reporter = new DeviationReporter(calculator);
 
             var configuration = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, MissingFieldFound = null };
 
@@ -44,7 +45,6 @@ namespace Service
                 {
                     using (var csv = new CsvReader(reader, configuration))
                     {
-                        //List<Audit> audits = new List<Audit>();
 
                         List<Load> loadObjects = csv.GetRecords<Load>().ToList();
                         
@@ -91,41 +91,25 @@ namespace Service
                     }
                 }
             }
-            // POZIV METODE ZA PRORACUN DEVIJACIJE
+            
             if (ConfigurationManager.AppSettings["deviation"] == "APD")
             {
-                GetAbsolutePercentageDeviation(loads);
+                calculator.CalculateDeviation(loads, "APD");
             }
             else if (ConfigurationManager.AppSettings["deviation"] == "SD")
             {
-                GetSquaredDeviation(loads);
+                calculator.CalculateDeviation(loads, "SD");
             }
-            
-            
+
+
             // update DB
             DataBase.XmlDataBaseUpdate.UpdateDBLoad(loads);
 
-            // PRORACUN DEVIJACIJE
-            //GetAbsolutePercentageDeviation(loads);
-            //GetSquaredDeviation(loads);
+            
 
         }
 
-        public void GetAbsolutePercentageDeviation(List<Load> loads)
-        {
-            foreach (var obj in loads)
-            {
-                obj.AbsolutePercentageDeviation = ((obj.MeasuredValue - obj.ForecastValue) / obj.MeasuredValue) * 100;
-            }
-        }
-
-        public void GetSquaredDeviation(List<Load> loads)
-        {
-            foreach (var obj in loads)
-            {
-                obj.SquaredDeviation = Math.Pow(((obj.MeasuredValue - obj.ForecastValue) / obj.MeasuredValue), 2);
-            }
-        }
+        
 
         public FileManipulationResults SendFile(FileManipulationOptions options)
         {
