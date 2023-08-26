@@ -39,6 +39,7 @@ namespace Service
             List<Audit> audits = new List<Audit>();
             List<ImportedFile> importedFiles = new List<ImportedFile>();
             int cnt = 1;
+            int cntId = 1;
             foreach (string filePath in files)
             {
                 string fileName = Path.GetFileName(filePath);
@@ -76,11 +77,13 @@ namespace Service
                                 }
                                 else
                                 {
+                                    lo.Id = cntId;
                                     lo.AbsolutePercentageDeviation = double.NaN;
                                     lo.SquaredDeviation = double.NaN;
                                     lo.ImportedFileId = cnt;
                                     loads.Add(lo);
                                 }
+                                cntId++;
                             }
 
                         }
@@ -144,11 +147,16 @@ namespace Service
         public static string ConvertToCsv(List<Load> loads)
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("TimeStamp,ForecastValue,MeasuredValue,AbsolutePercentageDeviation,SquaredDeviation,ImportedFieldId");
+            //sb.AppendLine("Id,TimeStamp,ForecastValue,MeasuredValue,AbsolutePercentageDeviation,SquaredDeviation,ImportedFileId");
 
             foreach (var obj in loads)
             {
-                sb.AppendLine($"{obj.TimeStamp},{obj.ForecastValue},{obj.MeasuredValue},{obj.AbsolutePercentageDeviation},{obj.SquaredDeviation},{obj.ImportedFileId}");
+                if (DateTime.TryParseExact(obj.TimeStamp.ToString(), "dd.MM.yyyy. HH:mm:ss", null, System.Globalization.DateTimeStyles.None, out DateTime parsedDate))
+                {
+                    string newTimeStamp = parsedDate.ToString("yyyy/MM/dd HH:mm:ss");
+                    sb.AppendLine($"{obj.Id},{newTimeStamp},{obj.ForecastValue},{obj.MeasuredValue},{obj.AbsolutePercentageDeviation},{obj.SquaredDeviation},{obj.ImportedFileId}");
+                }
+                //sb.AppendLine($"{obj.Id},{newTimeStamp},{obj.ForecastValue},{obj.MeasuredValue},{obj.AbsolutePercentageDeviation},{obj.SquaredDeviation},{obj.ImportedFileId}");
             }
 
             return sb.ToString();
