@@ -116,27 +116,42 @@ namespace Service
 
             // Deserijalizuje Xml fajl i napravi listu objekata
             List<Load> objects = new XmlSerialize().ConvertXmlToObjects<Load>(path);
+            string csvContent = ConvertToCsv(objects);
 
             string fileName = @"C:\Users\Marko\source\repos\VirtuelizacijaProcesa\Service\bin\Debug\Calculations.csv";
-
+            
             try
             {
-                if (File.Exists(fileName))
-                {
-                    File.Delete(fileName);
-                }
+                //if (File.Exists(fileName))
+                //{
+                //    File.Delete(fileName);
+                //}
 
                 using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
                 {
-                    Byte[] title = new UTF8Encoding(true).GetBytes(objects.ToString());
-
-                    fs.Write(title, 0, title.Length);
+                    using (StreamWriter writer = new StreamWriter(fs))
+                    {
+                        writer.Write(csvContent);
+                    }
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        public static string ConvertToCsv(List<Load> loads)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("TimeStamp,ForecastValue,MeasuredValue,AbsolutePercentageDeviation,SquaredDeviation,ImportedFieldId");
+
+            foreach (var obj in loads)
+            {
+                sb.AppendLine($"{obj.TimeStamp},{obj.ForecastValue},{obj.MeasuredValue},{obj.AbsolutePercentageDeviation},{obj.SquaredDeviation},{obj.ImportedFileId}");
+            }
+
+            return sb.ToString();
         }
 
         public FileManipulationResults GetFiles(FileManipulationOptions options)

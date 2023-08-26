@@ -93,7 +93,7 @@ namespace Client
                     SendCsvFiles();
                     return true;
                 case "Get":
-                    // METODA
+                    GetDeviations();
                     return true;
                 case "Exit":
                     return false;
