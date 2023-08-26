@@ -33,6 +33,7 @@ namespace Common
                 if (disposing)
                 {
                     // TODO: dispose managed state (managed objects)
+                    return;
                 }
 
                 // TODO: free unmanaged resources (unmanaged objects) and override finalizer

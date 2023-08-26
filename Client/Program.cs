@@ -32,7 +32,9 @@ namespace Client
 
             IDownloader downloader = GetDownloader(proxy, downloadPath);
             proxy.GetDeviations();
-            Console.WriteLine($"Ime datoteke Calculations, putnja {downloadPath}");
+            downloader.Download("Calculations.csv");
+            Console.WriteLine($"Ime datoteke Calculations, putnja {downloadPath}. Pritisnite bilo koji taster da se vratite u pocetni meni.");
+            Console.ReadLine();
         }
 
         public static IDownloader GetDownloader(IConsumptionRecord proxy, string path)

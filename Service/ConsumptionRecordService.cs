@@ -118,14 +118,14 @@ namespace Service
             List<Load> objects = new XmlSerialize().ConvertXmlToObjects<Load>(path);
             string csvContent = ConvertToCsv(objects);
 
-            string fileName = @"C:\Users\Marko\source\repos\VirtuelizacijaProcesa\Service\bin\Debug\Calculations.csv";
+            string fileName = @"C:\Users\Marko\source\repos\VirtuelizacijaProcesaPopravni\Service\bin\Debug\Calculations.csv";
             
             try
             {
-                //if (File.Exists(fileName))
-                //{
-                //    File.Delete(fileName);
-                //}
+                if (File.Exists(fileName))
+                {
+                    File.Delete(fileName);
+                }
 
                 using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
                 {
